@@ -7,7 +7,7 @@ import uce.edu.efinal2_api_pa.model.Estudiante;
 import uce.edu.efinal2_api_pa.repository.IEstudianteRepo;
 
 @Service
-public class EstudianteServiceImpl implements IEstudianteRepo{
+public class EstudianteServiceImpl implements IEstudianteService{
 
     @Autowired
     private IEstudianteRepo estudianteRepo;
@@ -17,9 +17,11 @@ public class EstudianteServiceImpl implements IEstudianteRepo{
         this.estudianteRepo.insertarEstudiante(e);
     }
 
+
     @Override
-    public Estudiante buscarPorCedula(String cedula) {
-        return this.estudianteRepo.buscarPorCedula(cedula);
+    public Estudiante buscarEstudiante(String cedula) {
+        // TODO Auto-generated method stub
+     return this.estudianteRepo.buscarPorCedula(cedula);
     }
 
 }
